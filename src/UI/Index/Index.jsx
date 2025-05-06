@@ -216,7 +216,7 @@ const Index = ({setCurrentUser}) => {
 							  	className="bg-[linear-gradient(145deg,_oklch(62.3%_0.214_259.815),_oklch(55.8%_0.288_302.321))] 
 							        hover:bg-[linear-gradient(145deg,_oklch(50%_0.214_259.815),_oklch(45%_0.288_302.321))] 
 							        py-2 px-4 cursor-pointer rounded-full uppercase transition duration-300"
-							    onClick={() => navigate(from, { replace: true })}
+							    onClick={() => navigate("/register", { replace: true })}
 							>
 							  get started
 						</button>
