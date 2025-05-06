@@ -3,6 +3,9 @@
     { "source": "/(.*)", "destination": "/" }
   ],
   "routes": [
+    { "handle": "filesystem" },
+    { "src": "/users", "dest": "/", "status": 200 },
+    { "src": "/cancel", "dest": "/", "status": 200 },
     { "src": "/[^.]+", "dest": "/", "status": 200 }
   ]
 }
