@@ -137,10 +137,19 @@ const Pricing = () => {
 
 			    // console.log(response.data);
 			    
-			    if (isMounted && response.data?.isSuccess) {
-			    	response.data?.message ? setErrMsg(response.data?.message) : window.open(response.data?.url, '_blank');
-			      	setIsLoading(false);
-			    }
+			    // if (isMounted && response.data?.isSuccess) {
+			    // 	response.data?.message ? setErrMsg(response.data?.message) : window.open(response.data?.url, '_blank');
+			    //   	setIsLoading(false);
+			    // }
+
+				if (isMounted && response.data?.isSuccess) {
+				  if (response.data?.message) {
+				    setErrMsg(response.data?.message); // Show the message in case of an error
+				  } else {
+				    window.location.href = response.data?.url; // Open the URL in the same page
+				  }
+				  setIsLoading(false);
+				}
 		  	}
 
 		  	catch (error) {
