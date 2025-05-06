@@ -4,7 +4,7 @@ import { Login, Register, Pricing, Billing, ProtectedRoute } from './components'
 
 import { Home, DMCA, EULA, Support, Terms, Privacy, Changelog, Users, Index, Success, Cancel } from './UI';
 
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
           <Route exact path="/privacy" element={<Privacy />} />
           <Route exact path="/changelog" element={<Changelog />} />
         </Route>
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="*" element={<Index />} />
       </Routes>
     </Fragment>
   )
